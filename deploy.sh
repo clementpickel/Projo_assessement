@@ -74,6 +74,7 @@ fi
 echo -e "${YELLOW}Sending docker-compose.yml and .env files...${NC}"
 scp docker-compose.yml ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/
 scp back/.env ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/back/.env 2>/dev/null || echo "back/.env not found, skipping"
+scp frontend/.env.prod ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/frontend/.env.prod 2>/dev/null || echo "frontend/.env.prod not found, skipping"
 scp frontend/.env ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/frontend/.env 2>/dev/null || echo "frontend/.env not found, skipping"
 
 echo -e "${GREEN}Files sent successfully${NC}"

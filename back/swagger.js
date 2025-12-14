@@ -13,6 +13,10 @@ const options = {
         url: 'http://localhost:3000',
         description: 'Local server',
       },
+      {
+        url: 'http://projo-back./clementpickel.fr',
+        description: 'Remote server',
+      },
     ],
   },
   apis: ['./routes/*.js'], // files where Swagger annotations live
